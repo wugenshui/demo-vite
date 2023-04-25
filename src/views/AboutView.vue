@@ -1,40 +1,38 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
-import logo from '@/assets/logo.svg'
-const quality = ref(0.1)
-const scaleImg = ref('')
+import koala from '@/assets/koala.png'
 
-var canvas: any = null
+const quality = ref()
+const scaleImg = ref('')
+// 画布元素
+const canvas = ref(null)
+
 var ctx: any = null
 
 onMounted(() => {
-  canvas = document.querySelector('canvas')
-  ctx = canvas?.getContext('2d')
+  ctx = canvas.value.getContext('2d')
   const img = new Image()
-  img.src = logo
-  img.width = 200
-  img.height = 200
+  img.src = koala
+  // img.width = 200
+  // img.height = 200
   img.onload = () => {
     ctx?.drawImage(img, 0, 0, 200, 200)
+    quality.value = 1
   }
 })
 
-watch(
-  quality,
-  (val) => {
-    console.log('watch', val)
-    if (!canvas) return
-    let base64 = canvas.toDataURL('image/png', val)
-    console.log('watch', base64)
-    scaleImg.value = base64
-  },
-  { immediate: true }
-)
+watch(quality, (val) => {
+  console.log('watch', val)
+  if (!canvas) return
+  let base64 = canvas.value.toDataURL('image/png', val)
+  console.log(`base64 size:${base64.length}`, base64)
+  scaleImg.value = base64
+})
 </script>
 
 <template>
   <div class="about">
-    <canvas refs="canvas"></canvas>
+    <canvas ref="canvas"></canvas>
     <input v-model="quality" />
     <img :src="scaleImg" />
   </div>
