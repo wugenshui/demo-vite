@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,13 +9,13 @@ const router = createRouter({
       children: [
         {
           path: '/dynamic',
-          name: 'DynamicLoad',
-          component: () => import('../views/DynamicLoad.vue')
+          name: '动态加载js',
+          component: () => import('../views/file/dynamicLoad/index.vue')
         },
         {
-          path: '/about',
-          name: 'about',
-          component: () => import('../views/AboutView.vue')
+          path: '/img/zip',
+          name: '图片压缩',
+          component: () => import('../views/file/ImgZip.vue')
         }
       ]
     }

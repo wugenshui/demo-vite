@@ -11,4 +11,6 @@ modules['./' + type + '.js']().then((mod: any) => {
 })
 </script>
 
-<template>{{ count }}.js loaded</template>
+<template>
+  <div>{{ count }}.js loaded</div>
+</template>
