@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
 import koala from '@/assets/koala.png'
+import { compressionFile } from '@/util/file'
 
 const quality = ref()
 const scaleImg = ref('')
@@ -18,19 +19,23 @@ onMounted(() => {
     canvas.value.width = img.width
     canvas.value.height = img.height
     ctx?.drawImage(img, 0, 0, img.width, img.height)
-    quality.value = 1
+    quality.value = 0.6
     valueChange(quality.value)
+    compressionFile(img, 'image/jpeg', 0.2)
+    compressionFile(img, 'image/jpeg', 0.4)
+    compressionFile(img, 'image/jpeg', 0.6)
+    compressionFile(img, 'image/jpeg', 0.8)
+    compressionFile(img, 'image/jpeg', 1)
   }
 })
 
 function valueChange(value: number) {
-  console.log('watch', value)
-  if (!canvas) return
   // base64计算文件大小
-  let base64 = canvas.value.toDataURL('image/png', value)
+  let base64 = canvas.value.toDataURL('image/jpeg', value)
   let size = base64.length - (base64.length / 8) * 2
   let kbSize = (size / 1024).toFixed(2)
   tip.value = `压缩精度:${value} 压缩后大小:${kbSize}kb`
+  console.log(tip.value)
   scaleImg.value = ''
   setTimeout(() => {
     scaleImg.value = base64
@@ -40,21 +45,13 @@ function valueChange(value: number) {
 
 <template>
   <div class="about">
-    <canvas ref="canvas"></canvas>
     <div>
-      <el-input-number v-model="quality" :min="0" :max="1" :step="0.1" @change="valueChange" />
+      <el-input-number v-model="quality" :min="0" :max="1" :step="0.2" @change="valueChange" />
     </div>
     <div>
       <el-text class="mx-1" type="primary">{{ tip }}</el-text>
     </div>
+    <canvas ref="canvas"></canvas>
     <img :src="scaleImg" />
   </div>
 </template>
-
-<style>
-canvas,
-img {
-  width: 200px;
-  height: 200px;
-}
-</style>
