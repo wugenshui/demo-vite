@@ -51,6 +51,7 @@ function valueChange(value: number) {
     <div>
       <el-text class="mx-1" type="primary">{{ tip }}</el-text>
     </div>
+    <!-- 小Tips:canvas css设置宽高无效，会导致绘制出现问题 -->
     <canvas ref="canvas"></canvas>
     <img :src="scaleImg" />
   </div>
