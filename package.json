@@ -10,7 +10,7 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "start": "serve dist -s -n -L -p 80"
+    "start": "serve dist -s -n -L -p $PORT"
   },
   "dependencies": {
     "dayjs": "^1.11.7",
