@@ -50,7 +50,7 @@ function submitForm() {
       // 表单验证不通过 跳转至首个错误位置
       setTimeout(() => {
         var isError = document.getElementsByClassName("is-error");
-        isError[0].querySelector('input').focus();
+        isError[0]?.querySelector('input')?.focus();
       }, 100);
       return false;
     }
