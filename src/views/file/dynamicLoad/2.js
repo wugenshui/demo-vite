@@ -1,4 +1,4 @@
 console.log('2.js loaded')
 export default function () {
-  return 2
+  return '2.js loaded'
 }
