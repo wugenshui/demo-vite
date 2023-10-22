@@ -18,6 +18,17 @@ const router = createRouter({
           component: () => import('../views/file/ImgZip.vue')
         }
       ]
+    },
+    {
+      path: '/element',
+      name: 'ElmentUI',
+      children: [
+        {
+          path: '/form/valid',
+          name: '表单验证',
+          component: () => import('../views/elementui/FormValid.vue')
+        }
+      ]
     }
   ]
 })

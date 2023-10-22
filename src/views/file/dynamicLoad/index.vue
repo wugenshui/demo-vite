@@ -13,7 +13,6 @@ function dynamicloadJs() {
     console.log(mod)
   })
 }
-
 </script>
 
 <template>
