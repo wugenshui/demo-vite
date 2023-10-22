@@ -44,15 +44,13 @@ function valueChange(value: number) {
 </script>
 
 <template>
-  <div class="about">
-    <div>
-      <el-input-number v-model="quality" :min="0" :max="1" :step="0.2" @change="valueChange" />
-    </div>
-    <div>
-      <el-text class="mx-1" type="primary">{{ tip }}</el-text>
-    </div>
-    <!-- 小Tips:canvas css设置宽高无效，会导致绘制出现问题 -->
-    <canvas ref="canvas"></canvas>
-    <img :src="scaleImg" />
+  <div>
+    <el-input-number v-model="quality" :min="0" :max="1" :step="0.2" @change="valueChange" />
   </div>
+  <div>
+    <el-text class="mx-1" type="primary">{{ tip }}</el-text>
+  </div>
+  <!-- 小Tips:canvas css设置宽高无效，会导致绘制出现问题 -->
+  <canvas ref="canvas"></canvas>
+  <img :src="scaleImg" />
 </template>

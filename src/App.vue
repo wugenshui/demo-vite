@@ -12,7 +12,9 @@
     </el-sub-menu>
   </el-menu>
   <!-- 路由视图 -->
-  <RouterView class="view" />
+  <div class="view">
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
