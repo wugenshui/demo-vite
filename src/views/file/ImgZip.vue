@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+<script setup>
+import { ref, onMounted } from 'vue'
 import koala from '@/assets/koala.png'
 import { compressionFile } from '@/util/file'
 
@@ -7,17 +7,17 @@ const quality = ref()
 const scaleImg = ref('')
 const tip = ref('')
 // 画布元素
-const canvas = ref<HTMLCanvasElement | null>(null)
+const canvas = ref(null)
 
-var ctx: CanvasRenderingContext2D | null = null
+var ctx = null
 
 onMounted(() => {
-  ctx = canvas.value!.getContext('2d')
+  ctx = canvas.value.getContext('2d')
   const img = new Image()
   img.src = koala
   img.onload = () => {
-    canvas.value!.width = img.width
-    canvas.value!.height = img.height
+    canvas.value.width = img.width
+    canvas.value.height = img.height
     ctx?.drawImage(img, 0, 0, img.width, img.height)
     quality.value = 0.6
     valueChange(quality.value)
@@ -29,9 +29,9 @@ onMounted(() => {
   }
 })
 
-function valueChange(value: number) {
+function valueChange(value) {
   // base64计算文件大小
-  let base64 = canvas.value!.toDataURL('image/jpeg', value)
+  let base64 = canvas.value.toDataURL('image/jpeg', value)
   let size = base64.length - (base64.length / 8) * 2
   let kbSize = (size / 1024).toFixed(2)
   tip.value = `压缩精度:${value} 压缩后大小:${kbSize}kb`

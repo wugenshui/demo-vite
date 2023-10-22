@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
 const count = ref()
 
@@ -8,7 +8,7 @@ const modules = import.meta.glob('./*.js')
 // 动态加载JS
 const file = ref('./1.js')
 function dynamicloadJs() {
-  modules[file.value]().then((mod: any) => {
+  modules[file.value]().then((mod) => {
     count.value = mod.default()
     console.log(mod)
   })

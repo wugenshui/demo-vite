@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
 
 // 表单 dom元素
@@ -43,7 +43,7 @@ const rules = ref({
 })
 
 function submitForm() {
-  form.value.validate((valid: any) => {
+  form.value.validate((valid) => {
     if (valid) {
       alert('submit!');
     } else {
