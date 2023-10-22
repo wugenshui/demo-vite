@@ -43,7 +43,7 @@ const rules = ref({
 })
 
 function submitForm() {
-  form.value.validate((valid) => {
+  form.value.validate((valid: any) => {
     if (valid) {
       alert('submit!');
     } else {
