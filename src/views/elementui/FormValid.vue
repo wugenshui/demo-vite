@@ -22,42 +22,30 @@ const rules = ref({
     { required: true, message: '请输入活动名称', trigger: 'blur' },
     { min: 1, max: 15, message: '长度在 1 到 15 个字符', trigger: 'blur' }
   ],
-  region: [
-    { required: true, message: '请选择活动区域', trigger: 'change' }
-  ],
-  date1: [
-    { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
-  ],
-  date2: [
-    { type: 'date', required: true, message: '请选择时间', trigger: 'change' }
-  ],
-  type: [
-    { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
-  ],
-  resource: [
-    { required: true, message: '请选择活动资源', trigger: 'change' }
-  ],
-  desc: [
-    { required: true, message: '请填写活动形式', trigger: 'blur' }
-  ]
+  region: [{ required: true, message: '请选择活动区域', trigger: 'change' }],
+  date1: [{ type: 'date', required: true, message: '请选择日期', trigger: 'change' }],
+  date2: [{ type: 'date', required: true, message: '请选择时间', trigger: 'change' }],
+  type: [{ type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }],
+  resource: [{ required: true, message: '请选择活动资源', trigger: 'change' }],
+  desc: [{ required: true, message: '请填写活动形式', trigger: 'blur' }]
 })
 
 function submitForm() {
   form.value.validate((valid) => {
     if (valid) {
-      alert('submit!');
+      alert('submit!')
     } else {
       // 表单验证不通过 跳转至首个错误位置
       setTimeout(() => {
-        var isError = document.getElementsByClassName("is-error");
-        isError[0]?.querySelector('input')?.focus();
-      }, 100);
-      return false;
+        var isError = document.getElementsByClassName('is-error')
+        isError[0]?.querySelector('input')?.focus()
+      }, 100)
+      return false
     }
-  });
+  })
 }
 function resetForm() {
-  form.value.resetFields();
+  form.value.resetFields()
 }
 </script>
 
@@ -75,13 +63,22 @@ function resetForm() {
     <el-form-item label="活动时间" required>
       <el-col :span="11">
         <el-form-item prop="date1">
-          <el-date-picker type="date" placeholder="选择日期" v-model="formData.date1" style="width: 100%;"></el-date-picker>
+          <el-date-picker
+            type="date"
+            placeholder="选择日期"
+            v-model="formData.date1"
+            style="width: 100%"
+          ></el-date-picker>
         </el-form-item>
       </el-col>
       <el-col class="line" :span="2">-</el-col>
       <el-col :span="11">
         <el-form-item prop="date2">
-          <el-time-picker placeholder="选择时间" v-model="formData.date2" style="width: 100%;"></el-time-picker>
+          <el-time-picker
+            placeholder="选择时间"
+            v-model="formData.date2"
+            style="width: 100%"
+          ></el-time-picker>
         </el-form-item>
       </el-col>
     </el-form-item>
