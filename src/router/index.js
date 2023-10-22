@@ -29,6 +29,17 @@ const router = createRouter({
           component: () => import('../views/elementui/FormValid.vue')
         }
       ]
+    },
+    {
+      path: '/ability',
+      name: '能力测试',
+      children: [
+        {
+          path: '/camera',
+          name: '摄像头扫码',
+          component: () => import('../views/camera/ScanCode.vue')
+        }
+      ]
     }
   ]
 })
