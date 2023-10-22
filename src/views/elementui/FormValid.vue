@@ -20,7 +20,7 @@ const formData = ref({
 const rules = ref({
   name: [
     { required: true, message: '请输入活动名称', trigger: 'blur' },
-    { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+    { min: 1, max: 15, message: '长度在 1 到 15 个字符', trigger: 'blur' }
   ],
   region: [
     { required: true, message: '请选择活动区域', trigger: 'change' }
@@ -47,7 +47,11 @@ function submitForm() {
     if (valid) {
       alert('submit!');
     } else {
-      console.log('error submit!!');
+      // 表单验证不通过 跳转至首个错误位置
+      setTimeout(() => {
+        var isError = document.getElementsByClassName("is-error");
+        isError[0].querySelector('input').focus();
+      }, 100);
       return false;
     }
   });
