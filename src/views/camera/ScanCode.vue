@@ -114,6 +114,7 @@ export default {
     async handleResult(scanResult) {
       console.log(scanResult);
       // TODO 逻辑处理或直接返回扫码结果
+      this.scanTextData.tipMsg = scanResult;
       this.$emit("getScanResult", scanResult);
     }
   },
