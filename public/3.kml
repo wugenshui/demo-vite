@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>泗洲选厂</name>
+	<gx:CascadingStyle kml:id="__managed_style_016BF5A3622649001E56">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4.47761</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_19D76D67DF2649001E55">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2.98507</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_0DB54AFA342649001E55">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_19D76D67DF2649001E55</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_016BF5A3622649001E56</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0A1A8B8FB42649001E55">
+		<name>泗洲选厂</name>
+		<LookAt>
+			<longitude>117.7162170474967</longitude>
+			<latitude>29.04736705339927</latitude>
+			<altitude>88.04326527664098</altitude>
+			<heading>-0.6413922478723753</heading>
+			<tilt>23.65622733001717</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1555.429038429866</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0DB54AFA342649001E55</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						117.7161459987535,29.04972600476603,85.64673161787593 117.713334652796,29.04879424732133,77.63613735270542 117.7136445168679,29.04807072903152,84.75570543149269 117.714959434173,29.04598869077008,118.410763502292 117.7159741097377,29.04477001527125,110.063947005021 117.7163753222762,29.04423395275458,118.1314593599138 117.7200651739782,29.04429313733049,121.6364469108376 117.7200675840022,29.04460615733119,120.8011098977957 117.7194555984665,29.04501257678667,112.9910988143566 117.7193067994045,29.04557173826775,114.9532261544366 117.7187093883972,29.04564003130426,105.4156761869961 117.7182915483165,29.04613217028221,103.798337555955 117.7180951706664,29.04691383732571,98.95187591054469 117.7177441816921,29.04768409898597,93.25741799221353 117.717454072655,29.04843263393084,96.72339897601361 117.7168390120295,29.04948158402253,96.03028536274901 117.7161459987535,29.04972600476603,85.64673161787593 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

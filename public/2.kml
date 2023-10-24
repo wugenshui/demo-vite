@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>富家坞采场</name>
+	<gx:CascadingStyle kml:id="__managed_style_2C8EACF2AA2648FAB668">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4.47761</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_153349A97D2648FAB668">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2.98507</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_065480F5B22648FAB668">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_153349A97D2648FAB668</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2C8EACF2AA2648FAB668</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="01B1A812282648FAB667">
+		<name>富家坞采场</name>
+		<LookAt>
+			<longitude>117.7484094760855</longitude>
+			<latitude>28.98449118322769</latitude>
+			<altitude>276.8573637666899</altitude>
+			<heading>-0.2319867230178271</heading>
+			<tilt>6.294887768744569</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>12070.46505369013</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_065480F5B22648FAB668</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						117.7597740340275,29.01046755785206,505.4246710893221 117.7551331393224,29.0104834358705,564.4136431347779 117.7516875269953,29.00954762334677,520.3728753525069 117.7502245805409,29.00727709034982,476.5400883190804 117.7491344726856,29.00382174322884,402.0401138667405 117.7482721572312,28.9984166324651,541.4589037207314 117.7485068543428,28.99481396935603,528.8147559081 117.747719487486,28.99213030398397,475.4891630916246 117.7500684145987,28.99052027939549,353.9247629958039 117.7503782006304,28.98655433616991,316.7204989763035 117.7486330843591,28.98374071923485,261.3051383215714 117.7460846389034,28.98242237384859,315.7218594054608 117.7451479172404,28.98113571930264,320.7468399148489 117.7466121564313,28.97893325778286,277.2784207854709 117.7493958846724,28.97686471645108,211.7054242468838 117.7520349243047,28.97528196741089,199.3364954144008 117.7560856066246,28.97473120785398,150.0798910110559 117.7586887515151,28.97651536967566,207.6013531391369 117.7605200142213,28.97945683855099,227.9789535145904 117.7643488996768,28.98301261374773,300.1314658199581 117.7659062620781,28.98563942113853,257.6488260295191 117.7681758924871,28.98696523323937,185.3203406444556 117.7701770098231,28.98878212780644,202.4372370721537 117.7684614549791,28.99441268109836,217.6360815295229 117.7658081981158,28.99776369074701,229.5443895602436 117.7656414012703,28.99956467011749,258.4661676666785 117.7674137779819,29.00168169023354,241.2887662898534 117.7673184638875,29.00426891778387,278.9326634794293 117.7652173863624,29.0060025453351,353.9187600626436 117.7652222320183,29.00801257570292,422.6548104992451 117.7620210674134,29.00738329467108,359.6021854422648 117.7608796261411,29.00731468963269,381.7554613544356 117.7597740340275,29.01046755785206,505.4246710893221 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>
