@@ -4,8 +4,8 @@ const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/map',
-      redirect: ''
+      path: '/',
+      redirect: '/map/switchmaplayer'
     },
     {
       path: '/file',
@@ -50,9 +50,9 @@ const router = createRouter({
       name: '地图',
       children: [
         {
-          path: '/mapswitch',
-          name: '切换不同地图',
-          component: () => import('@/views/map/SwitchMap.vue'),
+          path: '/switchmaplayer',
+          name: '切换地图图层',
+          component: () => import('@/views/map/SwitchMapLayer.vue'),
         },
         {
           path: '/gaode',
