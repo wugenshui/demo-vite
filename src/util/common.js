@@ -40,3 +40,21 @@ export function success(msg, duration = 2000) {
     duration
   })
 }
+
+/**
+ * 获取请求参数值
+ * @param {*} variable 参数名
+ * @returns 参数值
+ */
+export function getQueryVariable(variable) {
+  let after = window.location.hash.split('?')[1]
+  if (after) {
+    let reg = new RegExp('(^|&)' + variable + '=([^&]*)(&|$)')
+    let r = after.match(reg)
+    if (r != null) {
+      return decodeURIComponent(r[2])
+    } else {
+      return null
+    }
+  }
+}
