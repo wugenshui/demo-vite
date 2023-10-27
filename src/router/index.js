@@ -5,34 +5,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/map/switchmaplayer'
-    },
-    {
-      path: '/file',
-      name: '文件处理',
-      children: [
-        {
-          path: '/dynamic',
-          name: '动态加载js',
-          component: () => import('../views/file/dynamicLoad/index.vue')
-        },
-        {
-          path: '/img/zip',
-          name: '图片压缩',
-          component: () => import('../views/file/ImgZip.vue')
-        }
-      ]
-    },
-    {
-      path: '/element',
-      name: 'ElmentUI',
-      children: [
-        {
-          path: '/form/valid',
-          name: '表单验证',
-          component: () => import('../views/elementui/FormValid.vue')
-        }
-      ]
+      redirect: '/switchmaplayer'
     },
     {
       path: '/ability',
@@ -103,6 +76,33 @@ const router = createRouter({
           path: '/test',
           name: '测试界面',
           component: () => import('@/views/map/Test.vue'),
+        }
+      ]
+    },
+    {
+      path: '/file',
+      name: '文件处理',
+      children: [
+        {
+          path: '/dynamic',
+          name: '动态加载js',
+          component: () => import('../views/file/dynamicLoad/index.vue')
+        },
+        {
+          path: '/img/zip',
+          name: '图片压缩',
+          component: () => import('../views/file/ImgZip.vue')
+        }
+      ]
+    },
+    {
+      path: '/element',
+      name: 'ElmentUI',
+      children: [
+        {
+          path: '/form/valid',
+          name: '表单验证',
+          component: () => import('../views/elementui/FormValid.vue')
         }
       ]
     }
