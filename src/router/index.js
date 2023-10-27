@@ -4,10 +4,6 @@ const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      redirect: '/switchmaplayer'
-    },
-    {
       path: '/ability',
       name: '能力测试',
       children: [
