@@ -231,15 +231,16 @@ export default {
 }
 
 .scan-tip {
-  width: 100vw;
-  text-align: center;
-  margin-bottom: 5vh;
-  color: white;
-  font-size: 5vw;
   position: absolute;
-  bottom: 50px;
-  left: 0;
-  color: #fff;
+  height: 200px;
+  left: 10px;
+  right: 10px;
+  bottom: 0px;
+  font-size: 14px;
+  color: white;
+  white-space: normal;
+  text-align: center;
+  word-break: break-word;
 }
 
 .page-scan {
