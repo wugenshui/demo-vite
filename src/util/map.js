@@ -61,7 +61,7 @@ function createWMTSLayer(url, projection = 'EPSG:4326') {
 
   return new TileLayer({
     source: new WMTS({
-      url: 'http://t{0-7}.tianditu.gov.cn/vec_c/wmts?tk=df2e5ca32d07db0958046b5c250c0430',
+      url,
       crossOrigin: 'anonymous',
       layer: 'vec',
       version: '1.0.0',

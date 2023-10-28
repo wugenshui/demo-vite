@@ -10,46 +10,69 @@ import TileLayer from 'ol/layer/Tile'
 import OSM from 'ol/source/OSM'
 import View from 'ol/View'
 import { gcjProjection } from '@/util/projectionGCJ'
-import { createWMSLayer, createWMTSLayer, createXYZLayer, addVectorLayer, addLine } from '@/util/map'
+import {
+  createWMSLayer,
+  createWMTSLayer,
+  createXYZLayer,
+  addVectorLayer,
+  addLine
+} from '@/util/map'
 import { names, wgs84, gcj02 } from '@/data/points'
 import MAPURL from '@/util/mapurl'
 
 // 地图当前展示图层
+let map
+// 地图当前展示图层
 let mapCurrentLayer = []
 // 切换图层列表
-let layers = []
+let layersGoups = []
 
 export default {
   name: 'SwitchMap',
   data() {
     return {
-      types: ['天地图街道 WMTS', '天地图街道 XYZ', '天地图卫星 XYZ', '高德街道 XYZ', '高德卫星 XYZ', 'OSM']
+      types: []
     }
   },
   methods: {
+    // 切换图层
     toggleMapType(index) {
-      mapCurrentLayer.setAt(0, layers[index])
+      map.setLayers(layersGoups[index])
+    },
+    // 创建图层组
+    createLayerGroup(layerGroupName, layers) {
+      this.types.push(layerGroupName)
+      layersGoups.push(layers)
     }
   },
   mounted() {
-    layers.push(createWMTSLayer(MAPURL.WMTSTiandituStreet, 'EPSG:4326'))
+    // 首个图层，默认加载
+    this.createLayerGroup('天地图街道', [
+      createXYZLayer(MAPURL.Tianditu.Street, 'EPSG:4326'),
+      createXYZLayer(MAPURL.Tianditu.StreetFont, 'EPSG:4326')
+    ])
 
-    layers.push(createXYZLayer(MAPURL.TiandituStreet))
-    layers.push(createXYZLayer(MAPURL.TiandituSatellite))
+    this.createLayerGroup('天地图卫星', [
+      createXYZLayer(MAPURL.Tianditu.Satellite, 'EPSG:4326'),
+      createXYZLayer(MAPURL.Tianditu.SatelliteFont, 'EPSG:4326')
+    ])
 
-    layers.push(createXYZLayer(MAPURL.GaodeStreet, gcjProjection))
-    layers.push(createXYZLayer(MAPURL.GaodeSatellite, gcjProjection))
+    this.createLayerGroup('天地图街道WMTS', [
+      createWMTSLayer(MAPURL.Tianditu.WMTSStreetFont, 'EPSG:4326'),
+      createWMTSLayer(MAPURL.Tianditu.WMTSStreet, 'EPSG:4326')
+    ])
 
-    layers.push(
+    this.createLayerGroup('高德街道', [createXYZLayer(MAPURL.GaodeStreet, gcjProjection)])
+    this.createLayerGroup('高德卫星', [createXYZLayer(MAPURL.GaodeSatellite, gcjProjection)])
+
+    layersGoups.push(
       new TileLayer({
         source: new OSM()
       })
     )
-    // 文字图层
-    let fontLayer = createXYZLayer(MAPURL.TiandituStreetFont)
 
-    let map = new Map({
-      layers: [layers[0], fontLayer],
+    map = new Map({
+      layers: [],
       target: 'map',
       view: new View({
         center: wgs84[1],
@@ -61,6 +84,7 @@ export default {
       })
     })
     mapCurrentLayer = map.getLayers()
+    this.toggleMapType(0)
 
     // 点击获取坐标
     map.on('click', function (e) {

@@ -1,31 +1,4 @@
-/**
- * 天地图街道图，需要鉴权 T=vec_c（经纬度投影） vec_w（球面墨卡托投影）
- */
-const TiandituStreet =
-  'http://t{0-7}.tianditu.com/DataServer?T=vec_c&x={x}&y={y}&l={z}&tk=df2e5ca32d07db0958046b5c250c0430'
 
-/**
- * 天地图街道图文字，需要鉴权 T=cva_c（经纬度投影） cva_w（球面墨卡托投影）
- */
-const TiandituStreetFont =
-  'http://t{0-7}.tianditu.com/DataServer?T=cva_c&x={x}&y={y}&l={z}&tk=df2e5ca32d07db0958046b5c250c0430'
-
-/**
- * 天地图卫星图，需要鉴权 T=img_c（经纬度投影） img_w（球面墨卡托投影）
- */
-const TiandituSatellite =
-  'http://t{0-7}.tianditu.com/DataServer?T=img_c&x={x}&y={y}&l={z}&tk=df2e5ca32d07db0958046b5c250c0430'
-
-/**
- * 天地图卫星图文字，需要鉴权 T=cia_c（经纬度投影） cia_w（球面墨卡托投影）
- */
-const TiandituSatelliteFont =
-  'http://t{0-7}.tianditu.com/DataServer?T=cva_c&x={x}&y={y}&l={z}&tk=df2e5ca32d07db0958046b5c250c0430'
-
-/**
- * WMTS 天地图街道图，需要鉴权 vec_c
- */
-const WMTSTiandituStreet = 'http://t{0-7}.tianditu.gov.cn/vec_c/wmts?tk=df2e5ca32d07db0958046b5c250c0430'
 
 /**
  * 高德街道图 style=7
@@ -48,16 +21,39 @@ const GoogleStreet = 'https://gac-geo.googlecnapps.cn/maps/vt?lyrs=m&gl=CN&x={x}
  */
 const GoogleSatellite = 'https://gac-geo.googlecnapps.cn/maps/vt?lyrs=s&gl=CN&x={x}&y={y}&z={z}'
 
+/**
+ * 天地图鉴权key，有使用量限制，建议申请公司key用于生产环境
+ */
+const TiandituTk = 'df2e5ca32d07db0958046b5c250c0430'
+
+/**
+ * 地图服务地址
+ */
 const MAPURL = {
-  TiandituStreet,
-  TiandituStreetFont,
-  TiandituSatellite,
-  TiandituSatelliteFont,
-  WMTSTiandituStreet,
   GaodeStreet,
   GaodeSatellite,
   GoogleStreet,
-  GoogleSatellite
+  GoogleSatellite,
+  // ***** 天地图 http://lbs.tianditu.gov.cn/server/MapService.html *****
+  // 目前验证WMTS图层无法正常使用
+  Tianditu: {
+    // 街道图 T=vec_c
+    Street: 'https://t{0-7}.tianditu.gov.cn/DataServer?T=vec_c&x={x}&y={y}&l={z}&tk=' + TiandituTk,
+    // 街道图文字 T=cva_c
+    StreetFont: 'https://t{0-7}.tianditu.gov.cn/DataServer?T=cva_c&x={x}&y={y}&l={z}&tk=' + TiandituTk,
+    // 卫星图 T=img_c
+    Satellite: 'http://t{0-7}.tianditu.gov.cn/DataServer?T=img_c&x={x}&y={y}&l={z}&tk=' + TiandituTk,
+    // 卫星图文字 T=cia_c
+    SatelliteFont: 'http://t{0-7}.tianditu.gov.cn/DataServer?T=cia_c&x={x}&y={y}&l={z}&tk=' + TiandituTk,
+    // WMTS街道图 /vec_c/
+    WMTSStreet: 'http://t{0-7}.tianditu.gov.cn/vec_c/wmts?tk=' + TiandituTk,
+    // WMTS街道图文字 /cva_c/
+    WMTSStreetFont: 'http://t{0-7}.tianditu.gov.cn/cva_c/wmts?tk=' + TiandituTk,
+    // WMTS卫星图 /img_c/
+    WMTSSatellite: 'https://t{0-7}.tianditu.gov.cn/img_c/wmts?tk=' + TiandituTk,
+    // WMTS卫星图文字 /cia_c/
+    WMTSSatelliteFont: 'https://t{0-7}.tianditu.gov.cn/cia_c/wmts?tk=' + TiandituTk,
+  }
 }
 
 export default MAPURL
