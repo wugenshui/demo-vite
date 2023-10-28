@@ -22,9 +22,7 @@ import MAPURL from '@/util/mapurl'
 
 // 地图当前展示图层
 let map
-// 地图当前展示图层
-let mapCurrentLayer = []
-// 切换图层列表
+// 图层列表
 let layersGoups = []
 
 export default {
@@ -88,7 +86,6 @@ export default {
         enableRotation: false
       })
     })
-    mapCurrentLayer = map.getLayers()
     this.toggleMapType(0)
 
     // 点击获取坐标
