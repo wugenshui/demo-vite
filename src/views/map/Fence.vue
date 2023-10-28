@@ -129,7 +129,7 @@ export default {
     }
   },
   mounted() {
-    let layer = createXYZLayer(MAPURL.GaodeStreet)
+    let layer = createXYZLayer(MAPURL.Gaode.Street)
 
     map = new Map({
       target: 'map',

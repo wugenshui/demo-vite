@@ -63,8 +63,8 @@ export default {
     }
   },
   mounted() {
-    layers.push(createXYZLayer(MAPURL.GoogleSatellite, gcjProjection))
-    layers.push(createXYZLayer(MAPURL.GoogleStreet, gcjProjection))
+    layers.push(createXYZLayer(MAPURL.Google.Satellite, gcjProjection))
+    layers.push(createXYZLayer(MAPURL.Google.Street, gcjProjection))
     // 外圈 KML 样式
     const outerKmlStyle = new Style({
       stroke: new Stroke({

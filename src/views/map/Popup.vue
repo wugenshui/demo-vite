@@ -56,8 +56,8 @@ export default {
     }
   },
   mounted() {
-    layers.push(createXYZLayer(MAPURL.GaodeStreet, 'EPSG:3857'))
-    layers.push(createXYZLayer(MAPURL.GaodeSatellite, 'EPSG:3857'))
+    layers.push(createXYZLayer(MAPURL.Gaode.Street, 'EPSG:3857'))
+    layers.push(createXYZLayer(MAPURL.Gaode.Satellite, 'EPSG:3857'))
 
     var map = new Map({
       target: 'map',

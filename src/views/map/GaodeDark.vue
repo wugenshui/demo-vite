@@ -40,16 +40,16 @@ export default {
     }
   },
   mounted() {
-    layers.push(ColorTranBlue(createXYZLayer(MAPURL.GaodeStreet, 'EPSG:3857')))
-    layers.push(ColorTranGray(createXYZLayer(MAPURL.GaodeStreet, 'EPSG:3857')))
-    layers.push(ColorTranBlack(createXYZLayer(MAPURL.GaodeStreet, 'EPSG:3857')))
-    layers.push(ColorTranReversal(createXYZLayer(MAPURL.GaodeStreet, 'EPSG:3857')))
-    layers.push(createXYZLayer(MAPURL.GaodeStreet, 'EPSG:3857'))
-    layers.push(ColorTranBlue(createXYZLayer(MAPURL.GaodeSatellite, 'EPSG:3857')))
-    layers.push(ColorTranGray(createXYZLayer(MAPURL.GaodeSatellite, 'EPSG:3857')))
-    layers.push(ColorTranBlack(createXYZLayer(MAPURL.GaodeSatellite, 'EPSG:3857')))
-    layers.push(ColorTranReversal(createXYZLayer(MAPURL.GaodeSatellite, 'EPSG:3857')))
-    layers.push(createXYZLayer(MAPURL.GaodeSatellite, 'EPSG:3857'))
+    layers.push(ColorTranBlue(createXYZLayer(MAPURL.Gaode.Street, 'EPSG:3857')))
+    layers.push(ColorTranGray(createXYZLayer(MAPURL.Gaode.Street, 'EPSG:3857')))
+    layers.push(ColorTranBlack(createXYZLayer(MAPURL.Gaode.Street, 'EPSG:3857')))
+    layers.push(ColorTranReversal(createXYZLayer(MAPURL.Gaode.Street, 'EPSG:3857')))
+    layers.push(createXYZLayer(MAPURL.Gaode.Street, 'EPSG:3857'))
+    layers.push(ColorTranBlue(createXYZLayer(MAPURL.Gaode.Satellite, 'EPSG:3857')))
+    layers.push(ColorTranGray(createXYZLayer(MAPURL.Gaode.Satellite, 'EPSG:3857')))
+    layers.push(ColorTranBlack(createXYZLayer(MAPURL.Gaode.Satellite, 'EPSG:3857')))
+    layers.push(ColorTranReversal(createXYZLayer(MAPURL.Gaode.Satellite, 'EPSG:3857')))
+    layers.push(createXYZLayer(MAPURL.Gaode.Satellite, 'EPSG:3857'))
 
     var map = new Map({
       target: 'map',

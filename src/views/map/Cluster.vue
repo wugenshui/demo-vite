@@ -37,7 +37,7 @@ export default {
     layers.push(
       new TileLayer({
         source: new XYZ({
-          url: MAPURL.GaodeStreet,
+          url: MAPURL.Gaode.Street,
           crossOrigin: 'anonymous',
           projection: 'EPSG:3857'
         })
@@ -46,7 +46,7 @@ export default {
     layers.push(
       new TileLayer({
         source: new XYZ({
-          url: MAPURL.GaodeSatellite,
+          url: MAPURL.Gaode.Satellite,
           crossOrigin: 'anonymous',
           projection: 'EPSG:3857'
         })

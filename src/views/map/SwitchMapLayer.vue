@@ -47,23 +47,28 @@ export default {
   },
   mounted() {
     // 首个图层，默认加载
+    // this.createLayerGroup('test', [
+    //   createXYZLayer('http://wprd0{1-4}.is.autonavi.com/appmaptile?style=7&x={x}&y={y}&z={z}')
+    // ])
     this.createLayerGroup('天地图街道', [
       createXYZLayer(MAPURL.Tianditu.Street, 'EPSG:4326'),
       createXYZLayer(MAPURL.Tianditu.StreetFont, 'EPSG:4326')
     ])
-
     this.createLayerGroup('天地图卫星', [
       createXYZLayer(MAPURL.Tianditu.Satellite, 'EPSG:4326'),
       createXYZLayer(MAPURL.Tianditu.SatelliteFont, 'EPSG:4326')
     ])
-
     this.createLayerGroup('天地图街道WMTS', [
       createWMTSLayer(MAPURL.Tianditu.WMTSStreetFont, 'EPSG:4326'),
       createWMTSLayer(MAPURL.Tianditu.WMTSStreet, 'EPSG:4326')
     ])
 
-    this.createLayerGroup('高德街道', [createXYZLayer(MAPURL.GaodeStreet, gcjProjection)])
-    this.createLayerGroup('高德卫星', [createXYZLayer(MAPURL.GaodeSatellite, gcjProjection)])
+    this.createLayerGroup('高德街道', [createXYZLayer(MAPURL.Gaode.Street, gcjProjection)])
+    this.createLayerGroup('高德街道2', [createXYZLayer(MAPURL.Gaode.Street2, gcjProjection)])
+    this.createLayerGroup('高德卫星', [createXYZLayer(MAPURL.Gaode.Satellite, gcjProjection)])
+
+    this.createLayerGroup('谷歌街道', [createXYZLayer(MAPURL.Google.Street, gcjProjection)])
+    this.createLayerGroup('谷歌卫星', [createXYZLayer(MAPURL.Google.Satellite, gcjProjection)])
 
     layersGoups.push(
       new TileLayer({
@@ -78,7 +83,7 @@ export default {
         center: wgs84[1],
         projection: 'EPSG:4326',
         zoom: 16,
-        maxZoom: 18,
+        maxZoom: 22,
         minZoom: 1,
         enableRotation: false
       })
