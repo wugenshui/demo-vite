@@ -20,14 +20,21 @@ export default {
       title: {
         text: '柱状图 bar'
       },
+      // 提示框
       tooltip: {},
-      // 分类
+      // x轴
       xAxis: {
         data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
       },
+      // y轴
       yAxis: {},
       // 数据
       series: [
+        {
+          name: '产量',
+          type: 'bar',
+          data: [15, 40, 60, 20, 30, 110]
+        },
         {
           name: '销量',
           type: 'bar',
@@ -55,6 +62,11 @@ export default {
       yAxis: {},
       // 数据
       series: [
+        {
+          name: '产量',
+          type: 'line',
+          data: [15, 40, 60, 20, 30, 110]
+        },
         {
           name: '销量',
           type: 'line',
@@ -94,6 +106,7 @@ export default {
       title: {
         text: '散点图 scatter'
       },
+      tooltip: {},
       xAxis: {},
       yAxis: {},
       series: [
@@ -116,8 +129,7 @@ export default {
         }
       ]
     })
-  },
-  methods: {}
+  }
 }
 </script>
 
