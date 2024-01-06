@@ -101,6 +101,17 @@ const router = createRouter({
           component: () => import('../views/elementui/FormValid.vue')
         }
       ]
+    },
+    {
+      path: '/echarts',
+      name: 'Echarts',
+      children: [
+        {
+          path: '/simple',
+          name: '基础图表',
+          component: () => import('../views/echarts/SimpleChart.vue')
+        }
+      ]
     }
   ]
 })
