@@ -110,6 +110,11 @@ const router = createRouter({
           path: '/simple',
           name: '基础图表',
           component: () => import('../views/echarts/SimpleChart.vue')
+        },
+        {
+          path: '/data-init',
+          name: '数据集初始化',
+          component: () => import('../views/echarts/DataInit.vue')
         }
       ]
     }
