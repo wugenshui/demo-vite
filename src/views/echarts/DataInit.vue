@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import 'echarts'
 import VChart from 'vue-echarts'
 export default {
   name: 'SimpleChart',
