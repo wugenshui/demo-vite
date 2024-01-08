@@ -1,13 +1,9 @@
-import { id } from 'element-plus/es/locale';
 <template>
-  <div id="chart1" class="chart"></div>
-  <div id="chart2" class="chart"></div>
-  <div id="chart3" class="chart"></div>
-  <div id="chart4" class="chart"></div>
+  <v-chart v-for="(c, i) in charts" class="chart" :option="c" autoresize :key="i" />
 </template>
 
 <script>
-import * as echarts from 'echarts'
+import VChart from 'vue-echarts'
 export default {
   name: 'SimpleChart',
   data() {
@@ -82,19 +78,23 @@ export default {
             type: 'scatter'
           }
         ]
-      }
+      },
+      // 展示图表
+      charts: []
     }
   },
+  components: {
+    VChart
+  },
   mounted() {
-    this.initChart('chart1', this.chart1)
-    this.initChart('chart2', this.chart2)
-    this.initChart('chart3', this.chart3)
-    this.initChart('chart4', this.chart4)
+    this.charts.push(this.initChartOption(this.chart1))
+    this.charts.push(this.initChartOption(this.chart2))
+    this.charts.push(this.initChartOption(this.chart3))
+    this.charts.push(this.initChartOption(this.chart4))
   },
   methods: {
-    initChart(id, data) {
-      // 柱状图 bar
-      var chart = echarts.init(document.getElementById(id))
+    // 初始化图表 option数据
+    initChartOption(data) {
       let options = {
         title: {
           text: data.title
@@ -117,13 +117,7 @@ export default {
         // y轴
         options.yAxis = {}
       }
-      // 绘制图表
-      chart.setOption(options)
-
-      // 为窗口加上宽度变化事件，当宽高发生改变时，调用echarts的resize()方法，调整图表尺寸
-      window.addEventListener('resize', function () {
-        chart.resize()
-      })
+      return options
     }
   }
 }
