@@ -95,7 +95,7 @@ export default {
     initChart(id, data) {
       // 柱状图 bar
       var chart = echarts.init(document.getElementById(id))
-      let option = {
+      let options = {
         title: {
           text: data.title
         },
@@ -104,19 +104,21 @@ export default {
         // 数据
         series: data.series
       }
-      if (data.xAxis) {
+      if (data.series[0].type === 'pie') {
+        options.series[0].top = 20
+      } else if (data.series[0].type === 'scatter') {
+        options.xAxis = {}
+        options.yAxis = {}
+      } else if (data.xAxis) {
         // x轴
-        option.xAxis = {
+        options.xAxis = {
           data: data.xAxis
         }
         // y轴
-        option.yAxis = {}
-      } else if (data.series[0].type === 'scatter') {
-        option.xAxis = {}
-        option.yAxis = {}
+        options.yAxis = {}
       }
       // 绘制图表
-      chart.setOption(option)
+      chart.setOption(options)
 
       // 为窗口加上宽度变化事件，当宽高发生改变时，调用echarts的resize()方法，调整图表尺寸
       window.addEventListener('resize', function () {
