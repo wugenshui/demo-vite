@@ -117,7 +117,7 @@ export default {
         case 'line':
         case 'bar':
           // 异常情况输出
-          if (data.xAxis) {
+          if (!data.xAxis) {
             console.error(type, 'xAxis is not null')
           }
           // x轴
