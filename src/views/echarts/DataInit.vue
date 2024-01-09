@@ -62,7 +62,6 @@ export default {
         title: '散点图 scatter',
         series: [
           {
-            symbolSize: 20,
             data: [
               [10.0, 8.04],
               [8.0, 6.95],
@@ -105,18 +104,39 @@ export default {
         // 数据
         series: data.series
       }
-      if (data.series[0].type === 'pie') {
-        options.series[0].top = 20
-      } else if (data.series[0].type === 'scatter') {
-        options.xAxis = {}
-        options.yAxis = {}
-      } else if (data.xAxis) {
-        // x轴
-        options.xAxis = {
-          data: data.xAxis
-        }
-        // y轴
-        options.yAxis = {}
+      let type = data.series[0].type
+      switch (type) {
+        case 'pie':
+          options.series[0].top = 20
+          break
+        case 'scatter':
+          options.xAxis = {}
+          options.yAxis = {}
+          options.series[0].symbolSize = 20
+          break
+        case 'line':
+        case 'bar':
+          // 异常情况输出
+          if (data.xAxis) {
+            console.error(type, 'xAxis is not null')
+          }
+          // x轴
+          options.xAxis = {
+            data: data.xAxis
+          }
+          // y轴
+          options.yAxis = {}
+          // 配置项
+          for (let i = 0; i < options.series.length; i++) {
+            options.series[i].label = {
+              show: true,
+              position: 'top'
+            }
+          }
+          break
+        default:
+          console.error('type is not support')
+          break
       }
       return options
     }

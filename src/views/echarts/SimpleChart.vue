@@ -33,12 +33,20 @@ export default {
         {
           name: '产量',
           type: 'bar',
-          data: [15, 40, 60, 20, 30, 110]
+          data: [15, 40, 60, 20, 30, 110],
+          label: {
+            show: true,
+            position: 'top'
+          }
         },
         {
           name: '销量',
           type: 'bar',
-          data: [5, 20, 36, 10, 10, 20]
+          data: [5, 20, 36, 10, 10, 20],
+          label: {
+            show: true,
+            position: 'top'
+          }
         }
       ]
     })
@@ -65,12 +73,18 @@ export default {
         {
           name: '产量',
           type: 'line',
-          data: [15, 40, 60, 20, 30, 110]
+          data: [15, 40, 60, 20, 30, 110],
+          label: {
+            show: true
+          }
         },
         {
           name: '销量',
           type: 'line',
-          data: [5, 20, 36, 10, 10, 20]
+          data: [5, 20, 36, 10, 10, 20],
+          label: {
+            show: true
+          }
         }
       ]
     })
