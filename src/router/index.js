@@ -88,6 +88,11 @@ const router = createRouter({
           path: '/img/zip',
           name: '图片压缩',
           component: () => import('../views/file/ImgZip.vue')
+        },
+        {
+          path: '/img/runner',
+          name: '图片动画',
+          component: () => import('../views/file/ImgRunner.vue')
         }
       ]
     },
