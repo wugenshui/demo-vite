@@ -122,7 +122,18 @@ const router = createRouter({
           component: () => import('../views/echarts/DataInit.vue')
         }
       ]
-    }
+    },
+    {
+      path: '/animation',
+      name: 'Animation',
+      children: [
+        {
+          path: '/loading',
+          name: '加载动画',
+          component: () => import('../views/animation/LoadingAnimation.vue')
+        }
+      ]
+    },
   ]
 })
 
