@@ -22,6 +22,13 @@ export default {
       },
       // 提示框
       tooltip: {},
+      // 边距
+      grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        containLabel: true
+      },
       // x轴
       xAxis: {
         data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
@@ -62,6 +69,13 @@ export default {
       title: {
         text: '折线图 line'
       },
+      // 边距
+      grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        containLabel: true
+      },
       tooltip: {},
       // 分类
       xAxis: {
@@ -96,6 +110,13 @@ export default {
       title: {
         text: '饼图 pie'
       },
+      // 边距
+      grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        containLabel: true
+      },
       tooltip: {},
       // 数据
       series: [
@@ -120,6 +141,13 @@ export default {
     chart4.setOption({
       title: {
         text: '散点图 scatter'
+      },
+      // 边距
+      grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        containLabel: true
       },
       tooltip: {},
       xAxis: {},

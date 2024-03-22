@@ -99,6 +99,13 @@ export default {
         title: {
           text: data.title
         },
+        // 边距
+        grid: {
+          left: '3%',
+          right: '3%',
+          bottom: '3%',
+          containLabel: true
+        },
         // 提示框
         tooltip: {},
         // 数据
