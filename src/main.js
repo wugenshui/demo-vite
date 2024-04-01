@@ -4,7 +4,7 @@ import { createPinia } from 'pinia'
 import router from './router'
 import App from './App.vue'
 import { getQueryVariable } from '@/util/common.js'
-import vConsole from 'vconsole';
+import eruda from 'eruda'
 
 import 'element-plus/dist/index.css'
 import '@/style/index.scss'
@@ -18,7 +18,7 @@ app.use(router)
 
 // 调试模式
 if (getQueryVariable("debug") === "true") {
-  new vConsole()
+  eruda.init();
 }
 
 // 组件
