@@ -2,6 +2,7 @@
   "name": "demo-vite",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite --host --open",
     "build": "vite build",
@@ -34,6 +35,7 @@
     "prettier": "^3.0.3",
     "sass": "^1.62.0",
     "serve": "^14.2.0",
+    "unocss": "^0.61.5",
     "vite": "^4.4.11"
   }
 }

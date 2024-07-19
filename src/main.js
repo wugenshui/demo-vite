@@ -11,6 +11,8 @@ import '@/style/index.scss'
 
 import MapSwitch from '@/components/MapSwitch.vue'
 
+import 'virtual:uno.css'
+
 const app = createApp(App)
 app.use(ElementPlus)
 app.use(createPinia())

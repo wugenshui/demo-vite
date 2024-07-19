@@ -134,6 +134,17 @@ const router = createRouter({
         }
       ]
     },
+    {
+      path: '/unocss',
+      name: 'Unocss',
+      children: [
+        {
+          path: '/unocss',
+          name: 'unocss',
+          component: () => import('../views/unocss/index.vue')
+        }
+      ]
+    },
   ]
 })
 
