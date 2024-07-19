@@ -21,7 +21,7 @@ const clazz = ref([
   'c-red',
   'container',
   'of-auto',
-  'of-auto text-nowrap w-12',
+  'of-auto text-nowrap w-12'
 ])
 </script>
 
@@ -34,6 +34,8 @@ const clazz = ref([
     <div class="flex-1 b-1 b-red b-solid">flex2</div>
     <div class="flex-1 b-1 b-red b-solid">flex3</div>
   </div>
+  <!-- 自定义组合 -->
+  <button type="button" class="h-btn">h-btn</button>
 </template>
 
 <style lang="scss">

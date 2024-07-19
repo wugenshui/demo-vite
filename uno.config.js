@@ -7,4 +7,7 @@ export default defineConfig({
   presets: [
     presetUno(),
   ],
+  shortcuts: {
+    "h-btn": 'py-2 px-4 font-semibold rounded-lg shadow-md'
+  }
 })
