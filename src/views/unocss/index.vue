@@ -36,6 +36,7 @@ const clazz = ref([
   </div>
   <!-- 自定义组合 -->
   <button type="button" class="h-btn">h-btn</button>
+  <button type="button" class="btn-red">btn-red</button>
 </template>
 
 <style lang="scss">
