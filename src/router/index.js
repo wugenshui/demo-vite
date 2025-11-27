@@ -145,6 +145,22 @@ const router = createRouter({
         }
       ]
     },
+    {
+      path: '/markdown',
+      name: 'Markdown',
+      children: [
+        {
+          path: '/preview',
+          name: 'Preview',
+          component: () => import('../views/markdown/Preview.vue')
+        },
+        {
+          path: '/editor',
+          name: 'Editor',
+          component: () => import('../views/markdown/Editor.vue')
+        }
+      ]
+    }
   ]
 })
 
