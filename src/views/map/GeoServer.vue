@@ -41,7 +41,7 @@ export default {
       })
     })
     this.layers = map.getLayers()
-    
+
     // 点击获取坐标
     map.on('click', function (e) {
       console.log('[' + e.coordinate[0] + ', ' + e.coordinate[1] + ']')

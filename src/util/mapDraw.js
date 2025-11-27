@@ -77,7 +77,7 @@ function enterDrawMode(map, vectorLayer, drawType, drawendHandle) {
   map.addInteraction(draw)
 
   // 绘制完成事件
-  draw.on('drawend', e => {
+  draw.on('drawend', (e) => {
     // 绘制完成后先中止绘制事件
     exitDrawMode(map)
     // 处理自定义响应
@@ -217,7 +217,7 @@ function fitFeature(map, vectorLayer, id) {
     return
   }
   let features = vectorLayer.getSource().getFeatures()
-  features.forEach(feature => {
+  features.forEach((feature) => {
     if (feature.getId() === id) {
       // 聚焦指定围栏
       map.getView().fit(feature.getGeometry(), { padding: [50, 50, 50, 50] })

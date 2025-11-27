@@ -1,62 +1,53 @@
 <template>
-    
-    <fieldset class="stage" >
-      <legend>dot-elastic</legend>
-      <div class="dot-elastic"></div>
-    </fieldset>
- 
-    <fieldset class="stage">
-      <legend>dot-pulse</legend>
-      <div class="dot-pulse"></div>
-    </fieldset>
- 
- 
-    <fieldset class="stage">
-      <legend>dot-flashing</legend>
-      <div class="dot-flashing"></div>
-    </fieldset>
- 
- 
-    <fieldset class="stage">
-      <legend>dot-collision</legend>
-      <div class="dot-collision"></div>
-    </fieldset>
- 
- 
-    <fieldset class="stage">
-      <legend>dot-carousel</legend>
-      <div class="dot-carousel"></div>
-    </fieldset>
- 
- 
-    <fieldset class="stage">
-      <legend>dot-typing</legend>
-      <div class="dot-typing"></div>
-    </fieldset>
- 
- 
-    <fieldset class="stage">
-      <legend>dot-floating</legend>
-      <div class="dot-floating"></div>
-    </fieldset>
- 
- 
-    <fieldset class="stage">
-      <legend>dot-spin</legend>
-      <div class="dot-spin"></div>
-    </fieldset>
- 
- 
-    <fieldset class="stage">
-      <legend>dot-falling</legend>
-      <div class="dot-falling"></div>
-    </fieldset>
- 
- 
-    <fieldset class="stage">
-      <legend>dot-stretching</legend>
-      <div class="dot-stretching"></div>
-    </fieldset>
+  <fieldset class="stage">
+    <legend>dot-elastic</legend>
+    <div class="dot-elastic"></div>
+  </fieldset>
+
+  <fieldset class="stage">
+    <legend>dot-pulse</legend>
+    <div class="dot-pulse"></div>
+  </fieldset>
+
+  <fieldset class="stage">
+    <legend>dot-flashing</legend>
+    <div class="dot-flashing"></div>
+  </fieldset>
+
+  <fieldset class="stage">
+    <legend>dot-collision</legend>
+    <div class="dot-collision"></div>
+  </fieldset>
+
+  <fieldset class="stage">
+    <legend>dot-carousel</legend>
+    <div class="dot-carousel"></div>
+  </fieldset>
+
+  <fieldset class="stage">
+    <legend>dot-typing</legend>
+    <div class="dot-typing"></div>
+  </fieldset>
+
+  <fieldset class="stage">
+    <legend>dot-floating</legend>
+    <div class="dot-floating"></div>
+  </fieldset>
+
+  <fieldset class="stage">
+    <legend>dot-spin</legend>
+    <div class="dot-spin"></div>
+  </fieldset>
+
+  <fieldset class="stage">
+    <legend>dot-falling</legend>
+    <div class="dot-falling"></div>
+  </fieldset>
+
+  <fieldset class="stage">
+    <legend>dot-stretching</legend>
+    <div class="dot-stretching"></div>
+  </fieldset>
 </template>
 
 <style>
@@ -75,11 +66,12 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+  box-shadow:
+    9984px 0 0 0 #9880ff,
+    9999px 0 0 0 #9880ff,
     10014px 0 0 0 #9880ff;
   animation: dotPulse 1.5s infinite linear;
 }
-
 
 .dot-elastic {
   position: relative;
@@ -100,7 +92,7 @@
 }
 .dot-elastic::before,
 .dot-elastic::after {
-  content: "";
+  content: '';
   display: inline-block;
   position: absolute;
   top: 0;
@@ -132,7 +124,7 @@
 }
 .dot-flashing::before,
 .dot-flashing::after {
-  content: "";
+  content: '';
   display: inline-block;
   position: absolute;
   top: 0;
@@ -142,7 +134,6 @@
   background-color: #9880ff;
   color: #9880ff;
 }
-
 
 .dot-collision {
   position: relative;
@@ -163,7 +154,7 @@
 }
 .dot-collision::before,
 .dot-collision::after {
-  content: "";
+  content: '';
   display: inline-block;
   position: absolute;
   top: 0;
@@ -174,7 +165,6 @@
   color: #9880ff;
 }
 
-
 .dot-carousel {
   position: relative;
   left: -9999px;
@@ -183,11 +173,12 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+  box-shadow:
+    9984px 0 0 0 #9880ff,
+    9999px 0 0 0 #9880ff,
     10014px 0 0 0 #9880ff;
   animation: dotCarousel 1.5s infinite linear;
 }
-
 
 .dot-typing {
   position: relative;
@@ -197,11 +188,12 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+  box-shadow:
+    9984px 0 0 0 #9880ff,
+    9999px 0 0 0 #9880ff,
     10014px 0 0 0 #9880ff;
   animation: dotTyping 1.5s infinite linear;
 }
-
 
 .dot-floating {
   position: relative;
@@ -222,7 +214,7 @@
 }
 .dot-floating::before,
 .dot-floating::after {
-  content: "";
+  content: '';
   display: inline-block;
   position: absolute;
   top: 0;
@@ -233,7 +225,6 @@
   color: #9880ff;
 }
 
-
 .dot-spin {
   position: relative;
   width: 10px;
@@ -241,15 +232,17 @@
   border-radius: 5px;
   background-color: transparent;
   color: transparent;
-  box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff,
-    18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0),
+  box-shadow:
+    0 -18px 0 0 #9880ff,
+    12.72984px -12.72984px 0 0 #9880ff,
+    18px 0 0 0 #9880ff,
+    12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0),
     0 18px 0 0 rgba(152, 128, 255, 0),
     -12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0),
     -18px 0 0 0 rgba(152, 128, 255, 0),
     -12.72984px -12.72984px 0 0 rgba(152, 128, 255, 0);
   animation: dotSpin 1.5s infinite linear;
 }
-
 
 .dot-falling {
   position: relative;
@@ -264,10 +257,9 @@
   animation-delay: 0.1s;
 }
 
-
 .dot-falling::before,
 .dot-falling::after {
-  content: "";
+  content: '';
   display: inline-block;
   position: absolute;
   top: 0;
@@ -286,7 +278,6 @@
   animation-delay: 0.2s;
 }
 
-
 .dot-stretching {
   position: relative;
   width: 10px;
@@ -298,10 +289,9 @@
   transform: scale(1.25, 1.25);
 }
 
-
 .dot-stretching::before,
 .dot-stretching::after {
-  content: "";
+  content: '';
   display: inline-block;
   position: absolute;
   top: 0;
@@ -318,12 +308,10 @@
   animation: dotStretchingAfter 2s infinite ease-in;
 }
 
-
 @keyframes dotStretchingBefore {
   0% {
     transform: translate(0) scale(0.7, 0.7);
   }
-
 
   50%,
   60% {
@@ -333,7 +321,6 @@
     transform: translate(0) scale(0.7, 0.7);
   }
 }
-
 
 @keyframes dotStretchingAfter {
   0% {
@@ -360,7 +347,6 @@
   }
 }
 
-
 @keyframes dotFallingAfter {
   0% {
     box-shadow: 10014px -15px 0 0 rgba(152, 128, 255, 0);
@@ -378,7 +364,6 @@
   0% {
     box-shadow: 9984px -15px 0 0 rgba(152, 128, 255, 0);
   }
-
 
   25%,
   50%,
@@ -399,17 +384,17 @@
     box-shadow: 9999px 0 0 0 #9880ff;
   }
 
-
   100% {
     box-shadow: 9999px 15px 0 0 rgba(152, 128, 255, 0);
   }
 }
 
-
 @keyframes dotSpin {
   0%,
   100% {
-    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff,
+    box-shadow:
+      0 -18px 0 0 #9880ff,
+      12.72984px -12.72984px 0 0 #9880ff,
       18px 0 0 0 #9880ff,
       12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0),
       0 18px 0 -5px rgba(152, 128, 255, 0),
@@ -418,8 +403,10 @@
       -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   12.5% {
-    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0),
-      12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff,
+    box-shadow:
+      0 -18px 0 -5px rgba(152, 128, 255, 0),
+      12.72984px -12.72984px 0 0 #9880ff,
+      18px 0 0 0 #9880ff,
       12.72984px 12.72984px 0 0 #9880ff,
       0 18px 0 -5px rgba(152, 128, 255, 0),
       -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0),
@@ -427,52 +414,64 @@
       -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   25% {
-    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0),
+    box-shadow:
+      0 -18px 0 -5px rgba(152, 128, 255, 0),
       12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0),
-      18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 #9880ff,
+      18px 0 0 0 #9880ff,
+      12.72984px 12.72984px 0 0 #9880ff,
       0 18px 0 0 #9880ff,
       -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0),
       -18px 0 0 -5px rgba(152, 128, 255, 0),
       -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   37.5% {
-    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0),
+    box-shadow:
+      0 -18px 0 -5px rgba(152, 128, 255, 0),
       12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0),
       18px 0 0 -5px rgba(152, 128, 255, 0),
-      12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 0 #9880ff,
+      12.72984px 12.72984px 0 0 #9880ff,
+      0 18px 0 0 #9880ff,
       -12.72984px 12.72984px 0 0 #9880ff,
       -18px 0 0 -5px rgba(152, 128, 255, 0),
       -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   50% {
-    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0),
+    box-shadow:
+      0 -18px 0 -5px rgba(152, 128, 255, 0),
       12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0),
       18px 0 0 -5px rgba(152, 128, 255, 0),
       12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0),
-      0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 0 #9880ff,
+      0 18px 0 0 #9880ff,
+      -12.72984px 12.72984px 0 0 #9880ff,
       -18px 0 0 0 #9880ff,
       -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   62.5% {
-    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0),
+    box-shadow:
+      0 -18px 0 -5px rgba(152, 128, 255, 0),
       12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0),
       18px 0 0 -5px rgba(152, 128, 255, 0),
       12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0),
       0 18px 0 -5px rgba(152, 128, 255, 0),
-      -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 0 #9880ff,
+      -12.72984px 12.72984px 0 0 #9880ff,
+      -18px 0 0 0 #9880ff,
       -12.72984px -12.72984px 0 0 #9880ff;
   }
   75% {
-    box-shadow: 0 -18px 0 0 #9880ff,
+    box-shadow:
+      0 -18px 0 0 #9880ff,
       12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0),
       18px 0 0 -5px rgba(152, 128, 255, 0),
       12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0),
       0 18px 0 -5px rgba(152, 128, 255, 0),
       -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0),
-      -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 0 #9880ff;
+      -18px 0 0 0 #9880ff,
+      -12.72984px -12.72984px 0 0 #9880ff;
   }
   87.5% {
-    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff,
+    box-shadow:
+      0 -18px 0 0 #9880ff,
+      12.72984px -12.72984px 0 0 #9880ff,
       18px 0 0 -5px rgba(152, 128, 255, 0),
       12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0),
       0 18px 0 -5px rgba(152, 128, 255, 0),
@@ -521,76 +520,102 @@
   }
 }
 
-
 @keyframes dotTyping {
   0% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+    box-shadow:
+      9984px 0 0 0 #9880ff,
+      9999px 0 0 0 #9880ff,
       10014px 0 0 0 #9880ff;
   }
   16.667% {
-    box-shadow: 9984px -10px 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+    box-shadow:
+      9984px -10px 0 0 #9880ff,
+      9999px 0 0 0 #9880ff,
       10014px 0 0 0 #9880ff;
   }
   33.333% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+    box-shadow:
+      9984px 0 0 0 #9880ff,
+      9999px 0 0 0 #9880ff,
       10014px 0 0 0 #9880ff;
   }
   50% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px -10px 0 0 #9880ff,
+    box-shadow:
+      9984px 0 0 0 #9880ff,
+      9999px -10px 0 0 #9880ff,
       10014px 0 0 0 #9880ff;
   }
   66.667% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+    box-shadow:
+      9984px 0 0 0 #9880ff,
+      9999px 0 0 0 #9880ff,
       10014px 0 0 0 #9880ff;
   }
   83.333% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+    box-shadow:
+      9984px 0 0 0 #9880ff,
+      9999px 0 0 0 #9880ff,
       10014px -10px 0 0 #9880ff;
   }
   100% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+    box-shadow:
+      9984px 0 0 0 #9880ff,
+      9999px 0 0 0 #9880ff,
       10014px 0 0 0 #9880ff;
   }
 }
 
-
 @keyframes dotCarousel {
   0% {
-    box-shadow: 9984px 0 0 -1px #9880ff, 9999px 0 0 1px #9880ff,
+    box-shadow:
+      9984px 0 0 -1px #9880ff,
+      9999px 0 0 1px #9880ff,
       10014px 0 0 -1px #9880ff;
   }
 
-
   50% {
-    box-shadow: 10014px 0 0 -1px #9880ff, 9984px 0 0 -1px #9880ff,
+    box-shadow:
+      10014px 0 0 -1px #9880ff,
+      9984px 0 0 -1px #9880ff,
       9999px 0 0 1px #9880ff;
   }
   100% {
-    box-shadow: 9999px 0 0 1px #9880ff, 10014px 0 0 -1px #9880ff,
+    box-shadow:
+      9999px 0 0 1px #9880ff,
+      10014px 0 0 -1px #9880ff,
       9984px 0 0 -1px #9880ff;
   }
 }
 @keyframes dotPulse {
   0% {
-    box-shadow: 9984px 0 0 -5px #9880ff, 9999px 0 0 0 #9880ff,
+    box-shadow:
+      9984px 0 0 -5px #9880ff,
+      9999px 0 0 0 #9880ff,
       10014px 0 0 2px #9880ff;
   }
 
-
   25% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 2px #9880ff,
+    box-shadow:
+      9984px 0 0 0 #9880ff,
+      9999px 0 0 2px #9880ff,
       10014px 0 0 0 #9880ff;
   }
   50% {
-    box-shadow: 9984px 0 0 2px #9880ff, 9999px 0 0 0 #9880ff,
+    box-shadow:
+      9984px 0 0 2px #9880ff,
+      9999px 0 0 0 #9880ff,
       10014px 0 0 -5px #9880ff;
   }
   75% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 -5px #9880ff,
+    box-shadow:
+      9984px 0 0 0 #9880ff,
+      9999px 0 0 -5px #9880ff,
       10014px 0 0 0 #9880ff;
   }
   100% {
-    box-shadow: 9984px 0 0 -5px #9880ff, 9999px 0 0 0 #9880ff,
+    box-shadow:
+      9984px 0 0 -5px #9880ff,
+      9999px 0 0 0 #9880ff,
       10014px 0 0 2px #9880ff;
   }
 }
@@ -654,7 +679,6 @@
   }
 }
 
-
 @keyframes dotCollisionAfter {
   0%,
   50%,
@@ -663,12 +687,10 @@
     transform: translateX(0);
   }
 
-
   25% {
     transform: translateX(15px);
   }
 }
-
 
 @keyframes dotCollisionBefore {
   0%,

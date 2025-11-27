@@ -59,12 +59,12 @@ export default {
       let lbsurl =
         'http://restapi.amap.com/v3/direction/driving?key=bf3e3cbca72146664d19ca28c9f9c5b7&origin=113.41032,23.380023&destination=113.41032,23.380023&originid=&destinationid=&extensions=base&strategy=0&waypoints=113.346593,23.143937&avoidpolygons=&avoidroad='
       let lines = []
-      axios.get(lbsurl).then(data => {
+      axios.get(lbsurl).then((data) => {
         let steps = data.data.route.paths[0].steps
         console.log(steps)
-        steps.forEach(sTemp => {
+        steps.forEach((sTemp) => {
           let ls = sTemp.polyline.split(';')
-          ls.forEach(lTemp => {
+          ls.forEach((lTemp) => {
             let l = lTemp.split(',')
             lines.push([l[0], l[1]])
           })
@@ -152,7 +152,9 @@ export default {
       border-top: 1px solid rgb(139, 164, 220);
       border-bottom: 1px solid rgb(139, 164, 220);
       background: rgb(142, 168, 224);
-      font: bold 18px / 1.3em arial, sans-serif;
+      font:
+        bold 18px / 1.3em arial,
+        sans-serif;
       text-align: center;
       white-space: nowrap;
       color: rgb(255, 255, 255);

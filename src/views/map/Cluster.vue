@@ -70,13 +70,13 @@ export default {
       console.log('[' + e.coordinate[0] + ', ' + e.coordinate[1] + ']')
 
       // 点击聚合点展开
-      clusterLayer.getFeatures(e.pixel).then(features => {
+      clusterLayer.getFeatures(e.pixel).then((features) => {
         if (features.length > 0) {
           const clusterMembers = features[0].get('features')
           if (clusterMembers.length > 1) {
             // 计算集群内部的范围，以便将视图缩放到该范围。
             const extent = createEmpty()
-            clusterMembers.forEach(feature => extend(extent, feature.getGeometry().getExtent()))
+            clusterMembers.forEach((feature) => extend(extent, feature.getGeometry().getExtent()))
             const view = map.getView()
             const resolution = map.getView().getResolution()
             if (

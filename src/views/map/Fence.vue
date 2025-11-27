@@ -110,16 +110,25 @@ export default {
       let localFenceStr = sessionStorage.getItem('LOCAL_FENCE')
       let localFence = JSON.parse(localFenceStr)
       if (localFence) {
-        localFence.forEach(fence => {
+        localFence.forEach((fence) => {
           switch (fence.type) {
             case 'Circle':
-              addCircle(vectorLayer, fence.id, fence.center, fence.radius, { id: ++this.count, type: 'Circle' })
+              addCircle(vectorLayer, fence.id, fence.center, fence.radius, {
+                id: ++this.count,
+                type: 'Circle'
+              })
               break
             case 'LineString':
-              addLineString(vectorLayer, fence.id, fence.coordinates, { id: ++this.count, type: 'LineString' })
+              addLineString(vectorLayer, fence.id, fence.coordinates, {
+                id: ++this.count,
+                type: 'LineString'
+              })
               break
             case 'Polygon':
-              addPolygon(vectorLayer, fence.id, fence.coordinates, { id: ++this.count, type: 'Polygon' })
+              addPolygon(vectorLayer, fence.id, fence.coordinates, {
+                id: ++this.count,
+                type: 'Polygon'
+              })
               break
             default:
               break
@@ -150,11 +159,11 @@ export default {
     addPoint(vectorLayer, '1', gcj02[1])
 
     // 点击事件处理
-    map.on('click', e => {
+    map.on('click', (e) => {
       // 在点击时获取像素区域
       var pixel = map.getEventPixel(e.originalEvent)
       // 点击事件顺序目前是乱序的，通过像素点进入layer、feature匹配
-      map.forEachFeatureAtPixel(pixel, feature => {
+      map.forEachFeatureAtPixel(pixel, (feature) => {
         let id = feature.get('id')
         let type = feature.get('type')
         let msg = `${id} ${type}`
@@ -163,7 +172,7 @@ export default {
       })
 
       // 仅返回最后创建图层的最新创建的feature
-      let feature = map.forEachFeatureAtPixel(pixel, feature => {
+      let feature = map.forEachFeatureAtPixel(pixel, (feature) => {
         return feature
       })
       console.log('feature', feature)
@@ -212,7 +221,9 @@ export default {
       border-top: 1px solid rgb(139, 164, 220);
       border-bottom: 1px solid rgb(139, 164, 220);
       background: rgb(142, 168, 224);
-      font: bold 18px / 1.3em arial, sans-serif;
+      font:
+        bold 18px / 1.3em arial,
+        sans-serif;
       text-align: center;
       white-space: nowrap;
       color: rgb(255, 255, 255);

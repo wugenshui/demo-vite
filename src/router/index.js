@@ -21,57 +21,57 @@ const router = createRouter({
         {
           path: '/switchmaplayer',
           name: '切换地图图层',
-          component: () => import('@/views/map/SwitchMapLayer.vue'),
+          component: () => import('@/views/map/SwitchMapLayer.vue')
         },
         {
           path: '/gaode',
           name: '高德地图',
-          component: () => import('@/views/map/Gaode.vue'),
+          component: () => import('@/views/map/Gaode.vue')
         },
         {
           path: '/gaodedark',
           name: '高德地图深色模式',
-          component: () => import('@/views/map/GaodeDark.vue'),
+          component: () => import('@/views/map/GaodeDark.vue')
         },
         {
           path: '/tianditudark',
           name: '天地图深色模式',
-          component: () => import('@/views/map/TianDiTuDark.vue'),
+          component: () => import('@/views/map/TianDiTuDark.vue')
         },
         {
           path: '/geoserver',
           name: 'GeoServer WMS',
-          component: () => import('@/views/map/GeoServer.vue'),
+          component: () => import('@/views/map/GeoServer.vue')
         },
         {
           path: '/fence',
           name: '围栏',
-          component: () => import('@/views/map/Fence.vue'),
+          component: () => import('@/views/map/Fence.vue')
         },
         {
           path: '/track',
           name: '轨迹',
-          component: () => import('@/views/map/Track.vue'),
+          component: () => import('@/views/map/Track.vue')
         },
         {
           path: '/popup',
           name: '弹框',
-          component: () => import('@/views/map/Popup.vue'),
+          component: () => import('@/views/map/Popup.vue')
         },
         {
           path: '/kml',
           name: 'KML',
-          component: () => import('@/views/map/KML.vue'),
+          component: () => import('@/views/map/KML.vue')
         },
         {
           path: '/cluster',
           name: '聚合',
-          component: () => import('@/views/map/Cluster.vue'),
+          component: () => import('@/views/map/Cluster.vue')
         },
         {
           path: '/test',
           name: '测试界面',
-          component: () => import('@/views/map/Test.vue'),
+          component: () => import('@/views/map/Test.vue')
         }
       ]
     },

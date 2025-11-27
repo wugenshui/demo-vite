@@ -26,7 +26,12 @@ export default {
 
 <template>
   <div class="map-switch">
-    <div v-for="(t, i) in types" :class="{ active: currentIndex === i }" @click="toggleMapType(i)" :key="i">
+    <div
+      v-for="(t, i) in types"
+      :class="{ active: currentIndex === i }"
+      @click="toggleMapType(i)"
+      :key="i"
+    >
       {{ t }}
     </div>
   </div>
@@ -68,7 +73,9 @@ export default {
       border-bottom: 1px solid rgb(139, 164, 220);
       background: rgb(142, 168, 224);
       padding: 2px 6px;
-      font: bold 12px / 1.3em arial, sans-serif;
+      font:
+        bold 12px / 1.3em arial,
+        sans-serif;
       text-align: center;
       white-space: nowrap;
       color: rgb(255, 255, 255);

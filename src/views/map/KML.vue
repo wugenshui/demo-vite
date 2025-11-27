@@ -151,15 +151,15 @@ export default {
     mapCurrentLayer = map.getLayers()
 
     // 点击获取坐标
-    map.on('click', e => {
+    map.on('click', (e) => {
       console.log('click', '[' + e.coordinate[0] + ', ' + e.coordinate[1] + ']')
       let view = map.getView()
       view.setCenter(e.coordinate)
       view.setZoom(15)
     })
 
-    map.on('pointermove', e => {
-      let feature = map.forEachFeatureAtPixel(e.pixel, feature => feature)
+    map.on('pointermove', (e) => {
+      let feature = map.forEachFeatureAtPixel(e.pixel, (feature) => feature)
       if (feature && feature.getProperties().name) {
         this.popupInfo = feature.getProperties().name
         popup.setPosition(e.coordinate)

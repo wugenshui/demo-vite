@@ -69,12 +69,12 @@ export default {
     })
 
     // 点击获取坐标
-    map.on('click', e => {
+    map.on('click', (e) => {
       console.log('event:click', '[' + e.coordinate[0] + ', ' + e.coordinate[1] + ']')
     })
 
     // 监听图层缩放事件
-    map.getView().on('change:resolution', e => {
+    map.getView().on('change:resolution', (e) => {
       console.log('event:change:resolution', e.target.getZoom(), e.target.getResolution())
     })
 

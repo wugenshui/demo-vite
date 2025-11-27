@@ -113,18 +113,18 @@ export default {
     vectorLayer.getSource().addFeature(feature2)
 
     // 鼠标移到图标上变成手势
-    map.on('pointermove', e => {
+    map.on('pointermove', (e) => {
       let pixel = map.getEventPixel(e.originalEvent)
       let hashasFeature = map.hasFeatureAtPixel(pixel)
       map.getTargetElement().style.cursor = hashasFeature ? 'pointer' : ''
     })
 
     // 点击图形元素事件
-    map.on('click', e => {
+    map.on('click', (e) => {
       // console.log('[' + e.coordinate[0] + ', ' + e.coordinate[1] + ']')
       var pixel = map.getEventPixel(e.originalEvent)
       // 第一种方式：遍历图形
-      map.forEachFeatureAtPixel(pixel, feature => {
+      map.forEachFeatureAtPixel(pixel, (feature) => {
         this.popupInfo = feature.get('data')
         this.showPopup(e.coordinate)
       })

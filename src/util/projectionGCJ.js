@@ -104,7 +104,8 @@ sphericalMercator.forward = forEachPoint(function (input, output, offset) {
 
 sphericalMercator.inverse = forEachPoint(function (input, output, offset) {
   output[offset] = input[offset] / RADIUS / RAD_PER_DEG
-  output[offset + 1] = (2 * Math.atan(Math.exp(input[offset + 1] / RADIUS)) - Math.PI / 2) / RAD_PER_DEG
+  output[offset + 1] =
+    (2 * Math.atan(Math.exp(input[offset + 1] / RADIUS)) - Math.PI / 2) / RAD_PER_DEG
 })
 
 var projzh = {}
@@ -129,7 +130,9 @@ projzh.gmerc2smerc = function (input, opt_output, opt_dimension) {
 
 projzh.ll2smerc = sphericalMercator.forward
 projzh.smerc2ll = sphericalMercator.inverse
-const gcj02Extent = [-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244]
+const gcj02Extent = [
+  -20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244
+]
 
 export const gcjProjection = new Projection({
   code: 'GCJ-02',

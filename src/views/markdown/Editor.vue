@@ -3,9 +3,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { MdEditor } from 'md-editor-v3';
-import 'md-editor-v3/lib/style.css';
+import { ref } from 'vue'
+import { MdEditor } from 'md-editor-v3'
+import 'md-editor-v3/lib/style.css'
 
 const text = ref(`## 😲 md-editor-v3
 
@@ -100,5 +100,5 @@ echarts
 note、abstract、info、tip、success、question、warning、failure、danger、bug、example、quote、hint、caution、error、attention
 
 !!!
-`);
+`)
 </script>

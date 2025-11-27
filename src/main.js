@@ -19,8 +19,8 @@ app.use(createPinia())
 app.use(router)
 
 // 调试模式
-if (getQueryVariable("debug") === "true") {
-  eruda.init();
+if (getQueryVariable('debug') === 'true') {
+  eruda.init()
 }
 
 // 组件

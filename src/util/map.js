@@ -281,7 +281,7 @@ function initVectorLayer(map, id) {
   var vectorLayer
   if (map != null) {
     let layers = map.getAllLayers()
-    let existLayer = layers.filter(layer => {
+    let existLayer = layers.filter((layer) => {
       return layer.get('id') === id
     })
     if (existLayer && existLayer.length > 0) {

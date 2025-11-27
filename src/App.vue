@@ -3,7 +3,12 @@
 <template>
   <!-- 导航菜单 -->
   <el-menu default-active="/" class="el-menu-demo" mode="horizontal" router>
-    <el-sub-menu v-show="route.name" :index="route.name" v-for="route in $router.options.routes" :key="route.name">
+    <el-sub-menu
+      v-show="route.name"
+      :index="route.name"
+      v-for="route in $router.options.routes"
+      :key="route.name"
+    >
       <template #title>{{ route.name }}</template>
       <el-menu-item :index="child.path" v-for="child in route.children" :key="child.name">{{
         child.name

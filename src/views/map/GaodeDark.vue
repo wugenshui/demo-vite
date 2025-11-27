@@ -7,7 +7,13 @@
 <script>
 import Map from 'ol/Map'
 import View from 'ol/View'
-import { createXYZLayer, ColorTranBlue, ColorTranGray, ColorTranBlack, ColorTranReversal } from '@/util/map'
+import {
+  createXYZLayer,
+  ColorTranBlue,
+  ColorTranGray,
+  ColorTranBlack,
+  ColorTranReversal
+} from '@/util/map'
 import { names, wgs84, gcj02 } from '@/data/points'
 import MAPURL from '@/util/mapurl'
 

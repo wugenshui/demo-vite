@@ -4,12 +4,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { MdPreview, MdCatalog } from 'md-editor-v3';
+import { ref } from 'vue'
+import { MdPreview, MdCatalog } from 'md-editor-v3'
 // preview.css相比style.css少了编辑器那部分样式
-import 'md-editor-v3/lib/preview.css';
+import 'md-editor-v3/lib/preview.css'
 
-const id = 'preview-only';
+const id = 'preview-only'
 const text = ref(`## 😲 md-editor-v3
 
 Markdown 编辑器，vue3 版本，使用 jsx 模板 和 typescript 开发，支持切换主题、prettier 美化文本等。
@@ -103,6 +103,6 @@ echarts
 note、abstract、info、tip、success、question、warning、failure、danger、bug、example、quote、hint、caution、error、attention
 
 !!!
-`);
-const scrollElement = ref(document.documentElement);
+`)
+const scrollElement = ref(document.documentElement)
 </script>
