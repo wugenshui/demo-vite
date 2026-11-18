@@ -146,6 +146,17 @@ const router = createRouter({
       ]
     },
     {
+      path: '/digital-human',
+      name: '数字人',
+      children: [
+        {
+          path: '/dh/speak',
+          name: '文字播报',
+          component: () => import('../views/digital-human/Speak.vue')
+        }
+      ]
+    },
+    {
       path: '/markdown',
       name: 'Markdown',
       children: [
